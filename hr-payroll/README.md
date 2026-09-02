@@ -1,4 +1,4 @@
-# PeoplePay
+# Flash HR
 
 Minimal single-organization HR and payroll tracking for English and Thai-speaking administrators. The app records payroll calculations; it does not transfer money.
 

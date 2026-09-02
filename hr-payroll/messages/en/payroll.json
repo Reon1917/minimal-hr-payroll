@@ -1,0 +1,18 @@
+{
+  "title": "Payroll",
+  "month": "Payroll month",
+  "generate": "Generate payroll",
+  "recalculate": "Recalculate",
+  "finalize": "Finalize payroll",
+  "reopen": "Revert to draft",
+  "history": "Payroll history",
+  "employee": "Employee",
+  "base": "Base salary",
+  "deduction": "Deduction",
+  "net": "Net salary",
+  "total": "Total calculated payroll",
+  "cannotCalculate": "Cannot calculate",
+  "missingSalary": "Salary not set",
+  "noPeriods": "No payroll periods yet",
+  "noPeriodsHelp": "Choose a month and generate a draft payroll."
+}

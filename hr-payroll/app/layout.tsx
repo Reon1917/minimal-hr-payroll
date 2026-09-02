@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { getLocale } from "@/lib/locale";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,14 +14,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: { default: "PeoplePay", template: "%s · PeoplePay" },
-  description: "Minimal HR and payroll administration",
+  title: { default: "Flash HR", template: "%s · Flash HR" },
+  description: "Fast, focused HR and payroll administration",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const locale = await getLocale();
   return (
     <html
-      lang="en"
+      lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full">{children}</body>

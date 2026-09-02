@@ -1,0 +1,14 @@
+{
+  "dashboard": "Dashboard",
+  "employees": "Employees",
+  "payroll": "Payroll",
+  "administration": "Administration",
+  "admins": "Administrators",
+  "logout": "Log out",
+  "language": "Language",
+  "primaryNavigation": "Primary navigation",
+  "openMenu": "Open menu",
+  "closeMenu": "Close menu",
+  "systemAdministrator": "System administrator",
+  "hrAdministrator": "HR administrator"
+}

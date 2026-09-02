@@ -1,0 +1,14 @@
+{
+  "dashboard": "แดชบอร์ด",
+  "employees": "พนักงาน",
+  "payroll": "เงินเดือน",
+  "administration": "การดูแลระบบ",
+  "admins": "ผู้ดูแลระบบ",
+  "logout": "ออกจากระบบ",
+  "language": "ภาษา",
+  "primaryNavigation": "เมนูหลัก",
+  "openMenu": "เปิดเมนู",
+  "closeMenu": "ปิดเมนู",
+  "systemAdministrator": "ผู้ดูแลระบบ",
+  "hrAdministrator": "ผู้ดูแลฝ่ายบุคคล"
+}

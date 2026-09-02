@@ -1,0 +1,11 @@
+{
+  "title": "Dashboard",
+  "greeting": "Good morning",
+  "activeEmployees": "Active employees",
+  "onLeave": "On leave today",
+  "currentPayroll": "Current payroll",
+  "payrollStatus": "Payroll status",
+  "recentEmployees": "Recent employees",
+  "thisMonth": "This month",
+  "noActivity": "No activity recorded this month."
+}

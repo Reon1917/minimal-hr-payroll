@@ -7,7 +7,7 @@ import { db } from "@/lib/db";
 import { approvedAdmins, employees, leaveRecords, payrollPeriods, session, user, type WorkSchedule } from "@/lib/db/schema";
 import { requireAdmin, requireSystemAdmin } from "@/lib/authorization";
 import { adminEmailSchema, employeeSchema, leaveSchema } from "@/lib/validation";
-import { normalizeMonth } from "@/lib/format";
+import { normalizeMonth, type Locale } from "@/lib/format";
 import { generateOrRecalculatePayroll, recalculateDraftPayroll } from "@/lib/payroll";
 import { photoStorage } from "@/lib/storage";
 import { cookies } from "next/headers";
@@ -26,9 +26,9 @@ async function photoFromForm(formData: FormData, existing?: string | null) {
   return file instanceof File && file.size > 0 ? photoStorage.save(file) : existing ?? null;
 }
 
-export async function setLocale(formData: FormData) {
-  const locale = formData.get("locale") === "th" ? "th" : "en";
-  (await cookies()).set("locale", locale, { sameSite: "lax", maxAge: 60 * 60 * 24 * 365, path: "/" });
+export async function setLocale(locale: Locale) {
+  const nextLocale: Locale = locale === "th" ? "th" : "en";
+  (await cookies()).set("locale", nextLocale, { sameSite: "lax", maxAge: 60 * 60 * 24 * 365, path: "/" });
 }
 
 export async function createEmployee(formData: FormData) {

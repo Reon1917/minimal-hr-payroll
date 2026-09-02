@@ -1,0 +1,12 @@
+{
+  "title": "Administrators",
+  "add": "Add HR administrator",
+  "email": "Email address",
+  "role": "Role",
+  "status": "Status",
+  "revoke": "Revoke access",
+  "reactivate": "Reactivate",
+  "system": "System administrator",
+  "hr": "HR administrator",
+  "help": "Only approved email addresses can create an account and access this system."
+}

@@ -1,0 +1,11 @@
+{
+  "start": "Start date",
+  "end": "End date",
+  "reason": "Reason",
+  "deduction": "Salary deduction",
+  "amount": "Deduction amount",
+  "month": "Payroll month",
+  "none": "No deduction",
+  "save": "Save leave",
+  "noLeave": "No leave records yet."
+}

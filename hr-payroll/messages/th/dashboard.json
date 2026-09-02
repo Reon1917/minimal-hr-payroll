@@ -1,0 +1,11 @@
+{
+  "title": "แดชบอร์ด",
+  "greeting": "สวัสดี",
+  "activeEmployees": "พนักงานที่ใช้งาน",
+  "onLeave": "ลาวันนี้",
+  "currentPayroll": "เงินเดือนปัจจุบัน",
+  "payrollStatus": "สถานะเงินเดือน",
+  "recentEmployees": "พนักงานล่าสุด",
+  "thisMonth": "เดือนนี้",
+  "noActivity": "ยังไม่มีกิจกรรมในเดือนนี้"
+}

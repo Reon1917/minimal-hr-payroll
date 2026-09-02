@@ -10,7 +10,7 @@ import { getMessages } from "@/lib/locale";
 
 export const metadata = { title: "Dashboard" };
 export default async function DashboardPage() {
-  const [admin, { locale, messages }] = await Promise.all([requireAdmin(), getMessages()]);
+  const [admin, { locale, messages }] = await Promise.all([requireAdmin(), getMessages("dashboard", "common", "employees")]);
   const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Bangkok", year:"numeric",month:"2-digit",day:"2-digit" }).format(new Date());
   const month = today.slice(0,7); const monthStart=`${month}-01`;
   const [year, monthNumber] = month.split("-").map(Number);
