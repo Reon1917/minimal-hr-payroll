@@ -43,6 +43,7 @@ export async function createEmployee(formData: FormData) {
     createdBy: admin.userId,
     updatedBy: admin.userId,
   }).returning({ id: employees.id });
+  revalidatePath("/calendar");
   redirect(`/employees/${employee.id}?saved=1`);
 }
 
@@ -60,6 +61,7 @@ export async function updateEmployee(employeeId: string, formData: FormData) {
     updatedBy: admin.userId,
     updatedAt: new Date(),
   }).where(eq(employees.id, employeeId));
+  revalidatePath("/calendar");
   revalidatePath(`/employees/${employeeId}`);
   redirect(`/employees/${employeeId}?saved=1`);
 }
@@ -67,6 +69,7 @@ export async function updateEmployee(employeeId: string, formData: FormData) {
 export async function archiveEmployee(employeeId: string) {
   const admin = await requireAdmin();
   await db.update(employees).set({ status: "ARCHIVED", updatedBy: admin.userId, updatedAt: new Date() }).where(eq(employees.id, employeeId));
+  revalidatePath("/calendar");
   revalidatePath("/employees");
   redirect("/employees?archived=1");
 }
@@ -98,6 +101,7 @@ export async function saveLeave(employeeId: string, leaveId: string | null, form
     await db.insert(leaveRecords).values({ ...values, createdBy: admin.userId });
   }
   await Promise.all([recalculateDraftPayroll(values.deductionPayrollMonth), oldMonth && oldMonth !== values.deductionPayrollMonth ? recalculateDraftPayroll(oldMonth) : Promise.resolve()]);
+  revalidatePath("/calendar");
   revalidatePath(`/employees/${employeeId}`);
   redirect(`/employees/${employeeId}?leaveSaved=1`);
 }
@@ -106,6 +110,7 @@ export async function deleteLeave(employeeId: string, leaveId: string) {
   await requireAdmin();
   const [record] = await db.delete(leaveRecords).where(and(eq(leaveRecords.id, leaveId), eq(leaveRecords.employeeId, employeeId))).returning({ month: leaveRecords.deductionPayrollMonth });
   if (record) await recalculateDraftPayroll(record.month);
+  revalidatePath("/calendar");
   revalidatePath(`/employees/${employeeId}`);
 }
 

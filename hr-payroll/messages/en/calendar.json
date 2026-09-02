@@ -1,0 +1,20 @@
+{
+  "title": "Calendar",
+  "description": "See who’s working and who’s away, day by day.",
+  "today": "Today",
+  "previousMonth": "Previous month",
+  "nextMonth": "Next month",
+  "working": "Working",
+  "onLeave": "On leave",
+  "more": "+{count} more",
+  "emptyDay": "No one scheduled",
+  "hint": "Based on active employees’ current weekly schedules. Click a day for the full list and leave details.",
+  "noEmployees": "No active employees yet. Add employees and their working hours to fill the calendar.",
+  "addEmployee": "Add employee",
+  "close": "Close day details",
+  "hoursNotSet": "Hours not set",
+  "dayOff": "Not scheduled",
+  "scheduledHours": "Scheduled hours",
+  "daySummary": "{working} working · {leave} on leave",
+  "weekdays": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+}

@@ -10,5 +10,6 @@
   "openMenu": "Open menu",
   "closeMenu": "Close menu",
   "systemAdministrator": "System administrator",
-  "hrAdministrator": "HR administrator"
+  "hrAdministrator": "HR administrator",
+  "calendar": "Calendar"
 }

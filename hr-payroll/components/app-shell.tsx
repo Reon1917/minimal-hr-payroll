@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useOptimistic, useState, useTransition } from "react";
-import { Banknote, ChevronDown, Gauge, Menu, ShieldCheck, Users, X } from "lucide-react";
+import { Banknote, CalendarDays, ChevronDown, Gauge, Menu, ShieldCheck, Users, X } from "lucide-react";
 import { setLocale } from "@/app/actions";
 import { authClient } from "@/lib/auth-client";
 import type { Locale } from "@/lib/format";
@@ -13,6 +13,7 @@ type ShellMessages = {
   nav: {
     dashboard: string;
     employees: string;
+    calendar: string;
     payroll: string;
     administration: string;
     admins: string;
@@ -45,6 +46,7 @@ export function AppShell({
   const links = [
     { href: "/dashboard", label: messages.nav.dashboard, icon: Gauge },
     { href: "/employees", label: messages.nav.employees, icon: Users },
+    { href: "/calendar", label: messages.nav.calendar, icon: CalendarDays },
     { href: "/payroll", label: messages.nav.payroll, icon: Banknote },
   ];
 
